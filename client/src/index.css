@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+/*
+  Dayflow design tokens.
+  Palette: deep ink navy (surfaces/text), warm parchment background,
+  a single confident accent (amber/gold) reserved for the "pulse"
+  signature element and primary actions, plus calm status colors
+  (green/present, slate/absent, amber/half-day, violet/leave).
+*/
+@theme {
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink-950: #10161f;
+  --color-ink-900: #161d29;
+  --color-ink-800: #1f2937;
+  --color-ink-700: #33404f;
+  --color-ink-500: #64748b;
+  --color-ink-300: #cbd5e1;
+  --color-ink-100: #eef1f5;
+
+  --color-paper: #faf8f4;
+  --color-paper-raised: #ffffff;
+
+  --color-pulse-500: #d98e04;
+  --color-pulse-600: #b8730a;
+  --color-pulse-50: #fdf3e1;
+
+  --color-status-present: #1a7f5a;
+  --color-status-present-bg: #e6f5ef;
+  --color-status-absent: #b3261e;
+  --color-status-absent-bg: #fbeaea;
+  --color-status-half: #b8730a;
+  --color-status-half-bg: #fdf3e1;
+  --color-status-leave: #5b4b9a;
+  --color-status-leave-bg: #efecf8;
+  --color-status-pending: #926c00;
+  --color-status-pending-bg: #fdf3e1;
+  --color-status-approved: #1a7f5a;
+  --color-status-approved-bg: #e6f5ef;
+  --color-status-rejected: #b3261e;
+  --color-status-rejected-bg: #fbeaea;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-ink-900);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-pulse-500);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
