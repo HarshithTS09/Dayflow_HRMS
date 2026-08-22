@@ -119,5 +119,4 @@ flow above in the browser.
 | Chethan M S  | Leave management, leave approval                  |
 | Chethan S    | Payroll, reports/analytics                        |
 
-Git commits/pushes are left to each team member from their own accounts —
-nothing in this build was pushed to a remote.
+Built for the **Odoo x NMIT Bangalore Hackathon '26**.
